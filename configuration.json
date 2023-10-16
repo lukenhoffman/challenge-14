@@ -1,0 +1,21 @@
+{
+    "development": {
+      "username": "your_username",
+      "password": "your_password",
+      "database": "your_db_name",
+      "host": "your_host",
+      "dialect": "mysql"
+    },
+    "test": {
+      "username": "your_username",
+      "password": "your_password",
+      "database": "your_test_db_name",
+      "host": "your_host",
+      "dialect": "mysql"
+    },
+    "production": {
+      "use_env_variable": "JAWSDB_URL",
+      "dialect": "mysql"
+    }
+  }
+  

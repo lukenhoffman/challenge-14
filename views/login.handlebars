@@ -1,0 +1,26 @@
+{{#extend "layouts/main"}}
+
+{{#content "body"}}
+    <h1>Login</h1>
+    
+    {{#if error}}
+        <p>{{ error }}</p>
+    {{/if}}
+    
+    <form id="login-form" action="/api/users/login" method="POST">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+        </div>
+        <div>
+            <button type="submit">Login</button>
+        </div>
+    </form>
+    <p>Don't have an account? <a href="/signup">Sign up</a></p>
+{{/content}}
+
+{{/extend}}

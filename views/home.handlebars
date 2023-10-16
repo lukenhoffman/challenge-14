@@ -1,0 +1,26 @@
+{{#extend "layouts/main"}}
+
+{{#content "body"}}
+    <h1>Welcome to Our Tech Blog</h1>
+
+    {{#if logged_in}}
+        <p>Welcome back, {{ user_username }}!</p>
+    {{/if}}
+
+    <section id="blog-posts">
+        {{#each posts}}
+            <article>
+                <h2><a href="/post/{{ id }}">{{ title }}</a></h2>
+                <p>{{ summary }}</p>
+                <p>Written by: {{ author }}</p>
+                <p>Published on: {{ published_date }}</p>
+            </article>
+        {{/each}}
+    </section>
+
+    {{#unless logged_in}}
+        <p>Want to join the discussion? <a href="/signup">Sign up</a> or <a href="/login">log in</a>!</p>
+    {{/unless}}
+{{/content}}
+
+{{/extend}}

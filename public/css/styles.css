@@ -1,0 +1,59 @@
+/* Reset some default padding and margin */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    background-color: #4C6375;
+    color: #FFF;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/* Link Styling */
+a {
+    color: #4C6375;
+}
+
+/* Form Styling */
+form {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4C6375;
+    color: #FFF;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Add additional styling below as per your needs */
+

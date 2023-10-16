@@ -1,0 +1,25 @@
+{{#extend "layouts/main"}}
+
+{{#content "body"}}
+    <h1>Dashboard</h1>
+    
+    {{#if logged_in}}
+        <p>Welcome, {{ user_username }}! Here are your posts:</p>
+        <section id="user-posts">
+            {{#each posts}}
+                <article>
+                    <h2>{{ title }}</h2>
+                    <p>{{ summary }}</p>
+                    <p>Published on: {{ published_date }}</p>
+                    <a href="/post/edit/{{ id }}">Edit</a> |
+                    <a href="/post/delete/{{ id }}">Delete</a>
+                </article>
+            {{/each}}
+        </section>
+        <a href="/post/new">Create a New Post</a>
+    {{else}}
+        <p>You need to be logged in to view your dashboard. <a href="/login">Log in</a> or <a href="/signup">Sign up</a></p>
+    {{/if}}
+{{/content}}
+
+{{/extend}}
