@@ -1,7 +1,6 @@
 const router = require('express').Router();
-const { Comment } = require('../comment.js');
-const { User } = require('../user.js');
-const { Post } = require('../post.js');
+const { Post, User, Comment } = require('../models');
+
 //const withAuth = require('../utils/auth');
 
 // Get all posts and display them on the homepage
